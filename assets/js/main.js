@@ -100,7 +100,19 @@ let newSwiper = new Swiper('.Newbooks__container', {
 });
 
 /*=============== TESTIMONIAL SWIPER ===============*/
-
+let TESTIMONIALSwiper = new Swiper('.testimonial_container', {
+  loop: true,
+  spaceBetween:12,
+  grabCursor:true,
+  slidesPerView :'auto',
+  centeredSlides:'auto',
+  
+  breakpoints:{
+    1150:{
+      slidesPerView :3,
+    }
+  }
+});
 
 /*=============== SHOW SCROLL UP ===============*/ 
 

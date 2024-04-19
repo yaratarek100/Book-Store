@@ -7,7 +7,7 @@
 
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: hsl(230, 62%, 56%);
+  --first-color: hsl(230, 67%, 54%);
   --title-color: hsl(230, 70%, 16%);
   --text-color: hsl(230, 16%, 45%);
   --border-color: hsl(230, 50%, 90%);
@@ -114,7 +114,7 @@ img {
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
   max-width: 1220px;
-  margin-inline: 1.5rem;
+  margin-inline: auto;
 }
 
 .grid {
@@ -155,7 +155,7 @@ header{
   text-align: center;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
+  margin: auto;
 }
 
 .nav__logo{
@@ -202,15 +202,12 @@ transition: color .4s;
 }
 .nav__link i {
   font-size: 1.25rem;
-  /* margin-inline: auto; */
 }
 
 .nav__link:hover{
   color: var(--first-color);
 }
-.nav{
-  margin-inline:1rem ;
-}
+
 .nav__actions{
   display: flex;
   align-items: center;
@@ -280,7 +277,7 @@ transition: color .4s;
 /*=============== LOGIN ===============*/
 .login{
   position: fixed;
-  top: -100%;
+  /* top: -100%; */
   left: 0;
   width: 100%;
   height: 100%;
@@ -288,17 +285,14 @@ transition: color .4s;
   background-color: hsla(230, 12%, 96%, .6);
   backdrop-filter: blur(16px);
   transition: top .4s;
-  top: -100%;
+  top: -150%;
 }
 .login form {
   padding: 1rem;
   background-color: var(--container-color);
   border: 2px solid var(--border-color);
-  height: auto;
   width: 70%;
-  margin: auto;
-  position: relative;
-  top: 10px;
+  margin: 4rem;
   
 }
 .login__title{
@@ -432,8 +426,8 @@ scale: 1;
 .featured__card{
   border: 2px solid var(--border-color);
   height: auto;
-  padding-block: 3rem;
-  /* width: 60%; */
+  padding-block: 2.5rem;
+  width: 80%;
   margin-inline:auto ;
   background-color: var(--container-color);
   overflow: hidden;
@@ -472,10 +466,7 @@ scale: 1;
 .featured__card:hover .featured__actions{
   right: 2rem;
 }
-/* .featured__price */
-/* .featured__button */
 
-/* Swiper class */
 
 
 /*=============== DISCOUNT ===============*/
@@ -516,12 +507,14 @@ scale: 1;
   background-color: var(--container-color);
   border: 2px solid var(--border-color);
   justify-content: space-between;
-  padding: 1.5rem;
+  padding: 1rem;
   transition: border .4s;
-  margin: 20px auto;
+  margin: 12px auto;
+  height: 15rem;
+  width: 23rem;
 }
 .new img{
-  width: 45%;
+  width: 35%;
 }
 .new i{
   font-size: 1.25rem;
@@ -537,19 +530,155 @@ color: var(--first-color);
 
 
 /*=============== JOIN ===============*/
+.join{
+  position: relative;
+  text-align: center;
+  padding-block: 2rem;
+  margin-top: 1rem;
+  /* background-color: aliceblue; */
+  /* z-index: 1; */
+  
+}
+.join_div{
+  margin-block: 1rem ;
+}
+.join__input{
+  padding: 1rem;
+  margin-bottom: -2rem;
+}
+.join__input , .join__button{
+  width: 100%;
+  display: block;
+  height: 40px;
+  font-size: 1rem;
+}
+.join_box * {
+  border-radius: 2px;
+  box-shadow: 1px 1px 20px #00000045;
+}
+.join__title{
+
+  font-size: 170%;
+  text-shadow: -1px 7px 14px #000000e8;
+  box-shadow: none;
+  color: white;
+  
+}
+.join__img{
+  position: absolute;
+  top: 1rem;
+  z-index: -1;
+}
+.join_box{
+  width: 90%;
+margin-top: 9%;
+}
 
 
 /*=============== TESTIMONIAL ===============*/
+.testimonial{
+  text-align: center;
+}
+
+.testimonial_box{
+border: 2px solid var(--border-color);
+background-color: white;
+padding: 0.6rem;
+margin: 0 auto;
+width: 22rem;
+}
+.testimonial img{
+  margin: 0.5rem auto;
+  height: 160px;
+}
+.testimonial p{
+  margin-block: 1rem;
+}
+.testimonial i{
+  font-size: 1.25rem;
+}
 
 
 /*=============== FOOTER ===============*/
+.footer{
+  margin-block: 5rem;
+  font-size: 1.2rem;
+}
 
+.footer__data{
+  font-size: 1.1rem;
+  grid-template-rows:repeat(2,max-content) ;
+  grid-template-columns: repeat(2,max-content);
+  margin-block:0.7rem ;
+}
+.footer__box{
+  padding: 1rem;
 
+}
+.footer li{
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+.footer h3{
+  font-size: 1.4rem;
+}
+.footer i{
+  margin-right: 3%;
+  font-size: 1.5rem;
+}
+.footer_social_link{
+  color: var(--text-color);
+
+}
+.footer__logo{
+  font-size: 1.4rem;
+  color: var(--first-color);
+  font-weight: 400;
+  display: block;
+  margin-block: 0.6rem;
+}
+.footer__link:hover ,.footer i:hover{
+color: var(--first-color);
+}
+
+.footer__copy{
+  font-size: var(--small-font-size);
+  text-align: center;
+
+}
+
+.footer__container{
+  margin-left: 15px;
+}
 /*=============== SCROLL BAR ===============*/
 
+::-webkit-scrollbar{
+  background-color: rgba(207, 207, 207, 0.432);
+  width: 1rem;
+}
+::-webkit-scrollbar-thumb{
+  background-color: rgba(128, 128, 128, 0.432);
+  border-radius: 0.5rem;
+}
+::-webkit-scrollbar-thumb:hover{
+  background-color: rgba(125, 119, 209, 0.61);
+}
 
 /*=============== SCROLL UP ===============*/
-
+.scrollup{
+  position: fixed;
+  right: 2rem;
+  bottom: 5rem;
+  background-color: var(--container-color);
+  box-shadow: 3px 4px 6px 2px #00000063;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  padding: 0.4rem;
+  font-size: xx-large;
+  color: var(--title-color);
+  z-index: var(--z-fixed);
+}
 
 /* Show Scroll Up */
 
