@@ -153,10 +153,34 @@ function activeLink (){
 }
 
 window.addEventListener('scroll',activeLink);
-// console.log();
-// window.addEventListener('scroll', scrollActive);
 
 /*=============== DARK LIGHT THEME ===============*/ 
+
+const themeButton = document.getElementById('theme-button')
+
+const light =()=> {
+document.body.classList.remove('dark-theme');
+themeButton.classList.remove('ri-sun-line');}
+
+const dark =()=> {
+document.body.classList.add('dark-theme');
+themeButton.classList.add('ri-sun-line');}
+
+if (localStorage.getItem('selected-theme')=='dark')
+{dark();}
+
+
+
+themeButton.addEventListener('click', () => {
+  if (localStorage.getItem('selected-theme')=='dark')
+  { light();
+  localStorage.removeItem('selected-theme');
+}
+else{
+  dark();
+  localStorage.setItem('selected-theme','dark');
+  }
+})
 
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/

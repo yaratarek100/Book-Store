@@ -14,6 +14,7 @@
   --white-color: hsl(0, 0%, 100%);
   --body-color: hsl(230, 100%, 96%);
   --container-color: hsl(230, 100%, 97%);
+  --box-shadow-color:  hsl(0, 0%, 71%);
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -103,12 +104,26 @@ img {
 
 /*=============== THEME ===============*/
 /*========== Variables Dark theme ==========*/
-
+body.dark-theme{
+  --title-color: hsl(230, 48%, 85%);
+  --text-color: hsl(230, 16%, 70%);
+  --border-color: hsl(230, 12%, 18%);
+  --body-color: hsl(230, 12%, 8%);
+  --container-color: hsl(230, 12%, 12%);
+  --box-shadow-color: hsl(0, 0%, 40%);
+}
 
 /*========== 
 	Color changes in some parts of 
 	the website, in dark theme
 ==========*/
+.dark-theme .login ,.dark-theme .search{
+  background-color: rgba(7, 7, 14, 0.562);
+}
+
+.dark-theme::-webkit-scrollbar-thumb{
+  background-color: rgba(240, 240, 240, 0.432);
+}
 
 
 /*=============== REUSABLE CSS CLASSES ===============*/
@@ -180,7 +195,7 @@ header{
   right: 0;
   width: 100%;
   background-color: var(--container-color);
-  box-shadow:0 -8px 32px hsla(0, 0%, 0%, .1) ;
+  box-shadow:0 -8px 32px var(--box-shadow-color) ;
   padding: 1.25rem 4rem;
   transition: background-color .4s;
 }
@@ -226,7 +241,7 @@ transition: color .4s;
 /* Add shadow header */
 
 .shadow-header{
-  box-shadow: 0 5px 32px hsla(0, 0%, 0%, .1) ;
+  box-shadow: 0 5px 32px var(--box-shadow-color) ;
 }
 /* Active link */
 .active-link{
@@ -323,7 +338,7 @@ transition: color .4s;
 
 
 .button:hover{
-  box-shadow: 0 4px 32px hsla(230, 72%, 32%, .4);
+  box-shadow: 0 4px 32px var(--box-shadow-color);
   cursor: pointer;
 }
 .login label{
@@ -556,7 +571,7 @@ color: var(--first-color);
 }
 .join_box * {
   border-radius: 2px;
-  box-shadow: 1px 1px 20px #00000045;
+  box-shadow: 1px 1px 20px var(--box-shadow-color);
 }
 .join__title{
 
@@ -673,7 +688,7 @@ color: var(--first-color);
   right: 2rem;
   bottom: -5rem;
   background-color: var(--container-color);
-  box-shadow: 3px 4px 6px 2px #00000063;
+  box-shadow: 3px 4px 6px 2px var(--box-shadow-color);
   height: 50px;
   width: 50px;
   text-align: center;
