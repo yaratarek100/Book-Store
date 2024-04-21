@@ -229,7 +229,9 @@ transition: color .4s;
   box-shadow: 0 5px 32px hsla(0, 0%, 0%, .1) ;
 }
 /* Active link */
-
+.active-link{
+  color: var(--first-color);
+}
 
 /*=============== SEARCH ===============*/
 .search{
@@ -568,6 +570,7 @@ color: var(--first-color);
   position: absolute;
   top: 1rem;
   z-index: -1;
+  /* min-width: 100%; */
 }
 .join_box{
   width: 90%;
@@ -668,7 +671,7 @@ color: var(--first-color);
 .scrollup{
   position: fixed;
   right: 2rem;
-  bottom: 5rem;
+  bottom: -5rem;
   background-color: var(--container-color);
   box-shadow: 3px 4px 6px 2px #00000063;
   height: 50px;
@@ -681,7 +684,9 @@ color: var(--first-color);
 }
 
 /* Show Scroll Up */
-
+.show-scroll{
+  bottom: 5rem;
+}
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */

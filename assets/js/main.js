@@ -116,9 +116,45 @@ let TESTIMONIALSwiper = new Swiper('.testimonial_container', {
 
 /*=============== SHOW SCROLL UP ===============*/ 
 
+const scrollUp = () =>{
+	const scrollUp = document.getElementById('scroll-up')
+    // When the scroll is higher than 350 viewport height, add the show-scroll class to the a tag with the scrollup class
+    window.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
+						: scrollUp.classList.remove('show-scroll')
+}
+window.addEventListener('scroll', scrollUp)
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 
+
+
+const sections = document.querySelectorAll('section[id]')
+
+function activeLink (){
+  const currentPositon=window.scrollY;
+  // console.log("current scroll"+currentPositon);
+  
+  for (section of sections){
+  
+  const sectionTop =section.offsetTop-60;
+  const sectionHeight=section.offsetHeight;
+  const sectionBottom = sectionTop +sectionHeight -60 ;
+  const sectionId =section.getAttribute('id');
+  const currentSectionLink = document.querySelector(`.nav__menu a[href="#${sectionId}"]`);
+
+  if (currentPositon>sectionTop && currentPositon<=sectionBottom){
+   currentSectionLink.classList.add('active-link');
+  }else{
+   currentSectionLink.classList.remove('active-link');  
+  }
+}
+
+
+}
+
+window.addEventListener('scroll',activeLink);
+// console.log();
+// window.addEventListener('scroll', scrollActive);
 
 /*=============== DARK LIGHT THEME ===============*/ 
 
